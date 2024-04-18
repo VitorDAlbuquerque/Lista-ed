@@ -1,0 +1,56 @@
+package com.company;
+import estruturas.Fila;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Fila fila = new Fila();
+
+        fila.enfileirar("maria");
+        fila.enfileirar("Ana");
+        fila.enfileirar("Carlos");
+        fila.enfileirar("maria");
+        fila.enfileirar("Ana");
+        fila.enfileirar("Carlos");
+
+
+//        System.out.println(fila.estaVazia()  ? "Vazia" : "Não está vazia");
+//        System.out.println(fila.inicio());
+//        System.out.println(fila.desenfileirar());
+//        fila.enfileirar("maria");
+//        fila.enfileirar("Ana");
+//        fila.enfileirar("Carlos");
+//        System.out.println(fila.estaVazia() ? "vazia" : "Não esta vazia");
+//        System.out.println(fila.inicio());
+//        System.out.println(fila.desenfileirar());
+//        System.out.println(fila.inicio());
+//
+//
+//        System.out.println(fila.desenfileirar());
+//        System.out.println(fila.desenfileirar());
+//        System.out.println(fila.desenfileirar());
+//        System.out.println(fila.estaVazia() ? "vazia": "Não esta vazia");
+//
+//        fila.enfileirar("Ana");
+//        fila.enfileirar("Carlos");
+//        System.out.println(fila.estaVazia() ?"vazia" : "Não esta vazia");
+//        System.out.println(fila.inicio());
+
+
+    }
+
+
+
+
+public static void esvaziar(Fila fila){
+
+Object info = fila.desenfileirar();
+        while (info != null){
+            System.out.println(info);
+            info = fila.desenfileirar();
+        }
+
+}
+}
