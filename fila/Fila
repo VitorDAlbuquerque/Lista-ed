@@ -1,0 +1,68 @@
+package estruturas;
+
+public class Fila {
+    private int tamanho;
+    private No inicio;
+    private No fim;
+
+
+    public Fila(){
+        this.tamanho = 0;
+        this.inicio = null;
+        this.fim = null;
+    }
+
+
+    public boolean estaVazia(){
+        return tamanho == 0;
+    }
+
+    public Object inicio(){
+        if (estaVazia()){
+            return null;
+        }
+
+            return inicio.info;
+
+
+    }
+
+    public void enfileirar(Object info){
+        No a = new No(info);
+
+        if (inicio() == null){
+            inicio = a;
+            fim = a;
+        }
+
+        else {
+           fim.prox = a;
+           fim = a;
+        }
+
+        tamanho++;
+
+    }
+
+
+    public Object desenfileirar(){
+
+        if (estaVazia()){
+            return null;
+        }
+        No exinicio = inicio;
+
+        inicio = inicio.prox;
+        tamanho--;
+
+if (estaVazia()){
+            fim = null;
+        }
+
+        return exinicio.info;
+
+
+    }
+
+
+}
